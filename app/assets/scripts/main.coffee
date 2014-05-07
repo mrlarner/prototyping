@@ -15,8 +15,20 @@ angular.module("helo", [
 ])
 
 angular.module("helo")
+.filter('punctuate', ->
+  (input, text) ->
+    if input == undefined || input == ""
+      return ""
+    else
+      input + text 
+)
+
+angular.module("helo")
 .controller( "HiCtrl", [ '$scope',
   ($scope) ->
+    $scope.getname = ->
+      $scope.name
+
     $scope.message = "hinitial"
     console.log $scope.message
 ])

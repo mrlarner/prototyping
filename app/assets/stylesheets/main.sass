@@ -1,5 +1,6 @@
 @import "bootstrap"
 
+
 @mixin input-placeholder
   &.placeholder
     @content
@@ -12,33 +13,40 @@
   &::-webkit-input-placeholder
     @content
 
-html
-  padding: 40px
+body
   font-family: sans-serif
-  background: #6060c4
+  background: darken(#6060c4, 30%)
   text-shadow: 0 3px 10px rgba(#000, 0.2)
   h1
     color: lighten(#6089c6, 40%)
     font-size: 64px
+    background: #6060c4
+    padding: 40px
+    margin: 0
   
-  textarea
+  textarea.form-control
     font-size: 48px
     font-style: italic
-    padding: 20px
-    margin: 30px 0 0 0
+    padding: 40px
+    margin: 0
     color: #6060c4
+    border-left: none
+    border-right: none
+    border-radius: 0
+    border-top-width: 5px
+    border-bottom-width: 5px
     +input-placeholder
       color: #6060c4
 
 
   p.help
-    margin-top: 100px
+    padding: 40px
     a
       display: inline-block
       width: 100%
       line-height: 120px
       height: 120px
-      font-size: 48px
+      font-size: 24px
       color: lighten(#6089c6, 40%)
       text-decoration: none
       text-indent: 160px
