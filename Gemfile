@@ -10,6 +10,8 @@ group :development do
 
   gem 'guard'
   gem 'guard-slim'
+  gem 'guard-shell'
+  gem 'guard-bower'
   gem 'guard-bundler'
   gem 'guard-compass'
   gem 'guard-coffeescript'

@@ -5,28 +5,25 @@ guard 'bundler' do
   watch('Gemfile')
 end
 
-# guard 'livereload' do
-#   watch(%r{public/.+\.(css|js|html)})
-# end
+group :assets do
+  guard 'slim', input_root: 'app/assets/templates', output_root: 'public/templates', slim: { pretty: true } do
+    watch(%r'^.+\.slim$')
+  end
 
-guard 'slim', input_root: 'app/assets/templates', output_root: 'public/templates', slim: { pretty: true } do
-  watch(%r'^.+\.slim$')
+  guard :compass, configuration_file: 'compass.rb'
+
+  guard 'coffeescript', input: 'app/assets/scripts', output: 'public/scripts'
 end
 
-# Guard::Compass
-#
-# You don't need to configure watchers for guard 'compass' declaration as they generated
-# from your Compass configuration file. You might need to define the Compass working directory
-# and point to the configuration file depending of your project structure.
-#
-# Available options:
-#
-# * working_directory: Define the Compass working directory, relative to the Guardfile directory
-# * configuration_file: Path to the Compass configuration file, relative to :project_path
-#
-# Like usual, the Compass configuration path are relative to the :project_path
+guard :bower do
+  watch('bower.json')
+end
 
-# guard 'compass', project_path: 'not_current_dir', configuration_file: 'path/to/my/compass_config.rb'
-guard :compass, configuration_file: 'compass.rb'
-
-guard 'coffeescript', input: 'app/assets/scripts', output: 'public/scripts'
+guard 'shell' do
+  callback(:start_begin) do
+    `touch app/assets/scripts/main.coffee`
+    `touch app/assets/stylesheets/main.sass`
+    `touch app/templates/hello.slim`
+    `open http://localhost:9090`
+  end
+end
