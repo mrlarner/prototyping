@@ -1,0 +1,5 @@
+.sass-cache
+
+app/**/*.html
+
+public/*
