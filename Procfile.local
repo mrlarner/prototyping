@@ -1,0 +1,2 @@
+web: ruby -run -e httpd public -p 9090
+guard: bundle exec guard
