@@ -1,9 +1,8 @@
 #!/bin/bash
 
-project=${1-prototyping}
-git clone git@github.com:qetc/prototyping $project
-rm -rf $project/.git
-cd $project
+git clone git@github.com:qetc/prototyping
+rm -rf prototyping/.git
+cd prototyping
 git init
 git add .
 git commit -m "initial commit"
