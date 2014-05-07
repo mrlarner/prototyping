@@ -13,11 +13,17 @@ group :assets do
   guard :compass, configuration_file: 'compass.rb'
 
   guard 'coffeescript', input: 'app/assets/scripts', output: 'public/scripts'
+
+  guard 'livereload' do
+    watch(%r{public/.+\.(css|js|html)})
+  end
+
+  guard :bower do
+    watch('bower.json')
+  end
 end
 
-guard :bower do
-  watch('bower.json')
-end
+
 
 guard 'shell' do
   callback(:start_begin) do
@@ -27,3 +33,5 @@ guard 'shell' do
     `open http://localhost:9090`
   end
 end
+
+

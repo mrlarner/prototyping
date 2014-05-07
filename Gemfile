@@ -13,6 +13,7 @@ group :development do
   gem 'guard-shell'
   gem 'guard-bower'
   gem 'guard-bundler'
+  gem 'guard-livereload'
   gem 'guard-compass'
   gem 'guard-coffeescript'
 end

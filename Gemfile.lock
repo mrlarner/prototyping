@@ -23,6 +23,10 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.2.19)
     dotenv (0.7.0)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
     ffi (1.9.3)
     foreman (0.66.0)
@@ -47,11 +51,16 @@ GEM
     guard-compass (1.1.0)
       compass (>= 0.10.5)
       guard (~> 2.0)
+    guard-livereload (2.1.2)
+      em-websocket (~> 0.5)
+      guard (~> 2.0)
+      multi_json (~> 1.8)
     guard-shell (0.6.1)
       guard (>= 1.1.0)
     guard-slim (0.0.1)
       guard (>= 0.4.0)
       slim
+    http_parser.rb (0.6.0)
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -64,6 +73,7 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.5)
     method_source (0.8.2)
+    multi_json (1.10.0)
     multi_xml (0.5.5)
     nio4r (1.0.0)
     pry (0.9.12.6)
@@ -96,5 +106,6 @@ DEPENDENCIES
   guard-bundler
   guard-coffeescript
   guard-compass
+  guard-livereload
   guard-shell
   guard-slim
