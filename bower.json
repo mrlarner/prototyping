@@ -1,8 +1,8 @@
 {
   "name": "prototype",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "authors": [
-    "Matt Larner <mrlarner@gmail.com>"
+    "Matt Larner <matt@qand.co>"
   ],
   "description": "Barebones prototyper",
   "private": true,
@@ -17,6 +17,8 @@
   "dependencies": {
     "angular-animate": "~1.2.16",
     "angular-resource": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "jquery": "2.1.1",
     "angular-ui-router": "~0.2.10"
   }
 }
