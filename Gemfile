@@ -9,7 +9,7 @@ group :development do
   gem 'coffee'
 
   gem 'guard'
-  gem 'guard-slim'
+  gem 'guard-slim', github: "indrekj/guard-slim"
   gem 'guard-shell'
   gem 'guard-bower'
   gem 'guard-bundler'
