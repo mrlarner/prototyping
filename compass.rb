@@ -1,11 +1,15 @@
 # Require any additional compass plugins here.
 require "bootstrap-sass"
 # Set this to the root of your project when deployed:
+
+# relative_assets="true"
+
 http_path = "/"
-css_dir = "public/stylesheets"
-sass_dir = "app/assets/stylesheets"
-images_dir = "public/images"
-javascripts_dir = "public/javascripts"
+css_path = "public/stylesheets"
+sass_dir = "stylesheets"
+images_dir = "images"
+javascripts_dir = "javascripts"
+fonts_dir = "fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
