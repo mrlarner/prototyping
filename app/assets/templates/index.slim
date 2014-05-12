@@ -1,0 +1,24 @@
+doctype html
+html ng-app="helo"
+  head
+    title 
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+
+    link ng-href="/stylesheets/main.css" media="all" rel="stylesheet"
+
+    - [ "/scripts/vendor/jquery/dist/jquery.js",\
+        "/scripts/vendor/bootstrap/dist/js/bootstrap.js",\
+        "/scripts/vendor/angular/angular.js",\
+        "/scripts/vendor/angular-ui-router/release/angular-ui-router.js",\
+        "/scripts/vendor/angular-animate/angular-animate.js",\
+        "/scripts/main.js"\
+      ].each do |script|
+      script src="#{script}" type="text/javascript"
+  body
+    div ui-view=""
+    
+    p.help
+      a href="http://github.com/qetc/prototyping" More info?
+
+    javascript: 
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
